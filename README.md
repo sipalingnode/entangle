@@ -10,6 +10,7 @@
 - [Twitter](https://twitter.com/Entanglefi)
 - [Discord](https://discord.gg/entanglefi)
 - [Doc](https://entangle-protocol.gitbook.io/entangle-protocol/validator-guidelines-technical)
+- [Website](https://test.entangle.fi/)
 
 ## SPEK VPS
 
