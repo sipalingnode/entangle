@@ -18,13 +18,10 @@ sleep 2
 
 echo -e "\e[1m\e[32m Install Bahan \e[0m" && sleep 1
 sudo apt -q update
-sudo apt -qy install curl git jq lz4 build-essential
-sudo apt -qy upgrade
 
-sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.21.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+sudo apt -qy install curl git jq lz4 build-essential
+
+sudo apt -qy upgrade
 
 echo -e "\e[1m\e[32m Clone Repo \e[0m" && sleep 1
 git clone https://github.com/Entangle-Protocol/entangle-blockchain
