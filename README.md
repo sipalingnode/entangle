@@ -102,3 +102,48 @@ sudo systemctl daemon-reload
 sudo systemctl enable entangle.service
 sudo systemctl start entangle.service && sudo journalctl -fu entangle -o cat
 ```
+<p align="center">
+  <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/276374548-8a4b2366-b493-4d0d-8f0b-b1dab42bc9ae.png">
+</p>
+
+**Keterangan : Kalo udah jalan kek gini langsung `CTRL+C` aja kgk apa2 tinggal nunggu sinkron**
+
+## Create Validator (Jika sudah sinkron)
+- Cek Status Sinkron
+  ```
+  entangled status 2>&1 | jq .SyncInfo
+  ```
+  <p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/276374658-0ba754b7-ac80-4ef1-a64a-bd3483f3c22e.jpg">
+</p>
+
+- Create Validator
+ ```
+entangled tx staking create-validator \
+--amount="5000000000000000000aNGL" \
+--pubkey=$(entangled tendermint show-validator) \
+--moniker="YourNAME" \
+--chain-id=entangle_33133-1 \
+--commission-rate="0.10" \
+--identity " " \
+--website " " \
+--details " " \
+--commission-max-rate="0.20" \
+--commission-max-change-rate="0.01" \
+--min-self-delegation="1" \
+--gas=500000 \
+--gas-prices="10aNGL" \
+--from=wallet
+```
+
+## Delete Node (Jika sudah end eventnya)
+```
+sudo systemctl stop entangle
+sudo systemctl disable entangle
+rm /etc/systemd/system/entangle.service
+sudo systemctl daemon-reload
+cd $HOME
+rm -rf entangle-blockchain
+rm -rf .entangled
+rm -rf $(which entangled)
+```
