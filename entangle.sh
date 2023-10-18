@@ -8,7 +8,7 @@ echo  "   /  /_ _ _ \  \    _ _ __|  |   |   \_ _ _ _                           
 echo  "  /_ /        \ _\  |_ _ _ _ _|    \ _ _ _ _ _|                          ";
 echo -e "\e[35m"
 echo "=========================================================="
-echo -e '\e[35mNode :\e[35m' AR Node
+echo -e '\e[35mNode :\e[35m' Entangle Node
 echo -e '\e[35mTelegram Group :\e[35m' @autosultan_group
 echo -e '\e[35mTelegram Channel :\e[35m' @airdropasc
 echo "=========================================================="
