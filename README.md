@@ -113,10 +113,6 @@ sudo systemctl start entangle.service && sudo journalctl -fu entangle -o cat
   ```
   entangled status 2>&1 | jq .SyncInfo
   ```
-  <p align="center">
-  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/276374658-0ba754b7-ac80-4ef1-a64a-bd3483f3c22e.jpg">
-</p>
-
 - Create Validator
  ```
 entangled tx staking create-validator \
